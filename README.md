@@ -4,6 +4,13 @@ A frontend web application that combines real-time weather tracking with regiona
 Instead of building a generic weather application, I built this dashboard to solve a real user problem: helping beginners decide what to plant, when to plant it, and how to react to changing weather conditions.
 🔗 [Live Demo Link] (https://khahlisosekoto.github.io/weather-gardening-dashboard/)
 
+🔑 API Security Note
+
+To practice secure development, the secret API key has been removed from the public repository files. If you wish to run this application locally on your machine:
+1. Get a free API key from Visual Crossing Weather.
+2. Open the index.js file.
+3. Replace 'YOUR_API_KEY_HERE' on line 9 with your secret key string.
+
 ## Key Features
 
 • Dynamic Weather Tracking: Fetches real-time temperature, humidity, and wind speed data for any searched city.
