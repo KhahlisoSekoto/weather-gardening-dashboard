@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* Day 3 Dynamic Themes Placeholder */
+.theme-default {
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.app-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: minmax(auto, 350px) 1fr;
+    gap: 0rem;
+    align-items: start;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+button {
+    padding: 0.75rem 1.2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.toggle-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+#unit-toggle {
+    padding: 0.4rem 0.8rem;
+    background-color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+#unit-toggle:hover {
+    background-color: #6c7a7d;
+}
+
+#loading {
+    font-weight: 600;
+    color: #34495e;
+    margin: 1.5rem 0;
+}
+
+.temp-large {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+#display-condition {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+
+.details {
+    margin-top: 1.5rem;
+    text-align: left;
+    border-top: 2px solid #f1f2f6;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.details p {
+    color: #34495e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Garden Module Layout Custom Styles */
+.alert-banner {
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+}
+.alert-heat { background-color: #ffeaa7; color: #d63031; border-left: 5px solid #d63031; }
+.alert-cold { background-color: #dff9fb; color: #2980b9; border-left: 5px solid #2980b9; }
+.alert-rain { background-color: #e1f5fe; color: #0288d1; border-left: 5px solid #0288d1; }
+
+.crop-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+.crop-card:hover {
+    background: #f1f3f5;
+    transform: translateY(-1px);
+}
+.crop-details {
+    font-size: 0.85rem;
+    color: #495057;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #dee2e6;
+}
+
+/* Garden Dashboard Layout */
+.garden-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    text-align: left;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .garden-dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.garden-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    min-height: 450px;
+}
+
+.section-header h3 {
+    color: #1e293b;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+.section-header p {
+    color: #64748b;
+    margin: 0 0 1.25rem 0;
+    font-size: 0.85rem;
+}
+
+/* Crop Grid Items */
+.crop-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.crop-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.crop-card:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.crop-title {
+    font-size: 1.05rem;
+    color: #0f172a;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Metadata badges for quick-reading */
+.crop-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.badge-sun { background: #fef3c7; color: #d97706; }
+.badge-water { background: #e0f2fe; color: #0284c7; }
+
+.crop-details {
+    font-size: 0.85rem;
+    color: #334155;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed #e2e8f0;
+    line-height: 1.4;
+}
+
+/* Bottom Gardening Disclaimer Styling */
+.garden-disclaimer {
+    grid-column: 1 / -1; /* This makes the note stretch across both layout columns beautifully! */
+    display: block;
+    clear: both;
+    font-size: 0.85rem;
+    color: #475569; /* A beautiful crisp charcoal slate grey color */
+    background-color: #f8fafc; /* A soft, premium clean white-grey box wrap background */
+    border-left: 4px solid #e2e8f0; /* A neat accent left edge separator border line */
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Automatically snap columns open when the garden-container is revealed! */
+.app-container:has(#garden-container:not(.hidden)) {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Smart Gardinig Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+     <script type="module" src="index.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="weather-left-panel">
+            <h1>Weather Forecast</h1>
+            
+            <!-- Search Form -->
+            <form id="weather-form">
+
+        
+        <!-- Search Form -->
+        <form id="weather-form">
+            <input type="text" id="location-input" placeholder="Enter city or location..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Unit Toggle -->
+        <div class="toggle-container hidden">
+            <span id="unit-label">Displaying: °C</span>
+            <button id="unit-toggle">Switch to °F</button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="hidden">Loading weather data...</div>
+
+        <!-- Weather Display Card -->
+        <div id="weather-display" class="hidden">
+            <h2 id="display-location">---</h2>
+            <div id="display-temp" class="temp-large">--°</div>
+            <p id="display-condition">---</p>
+            <div class="details">
+                <p>Feels like: <span id="display-feels">--°</span></p>
+                <p>Humidity: <span id="display-humidity">--%</span></p>
+                <p>Wind Speed: <span id="display-wind">-- km/h</span></p>
+            </div>
+        </div>
+        </div>
+        
+    
+    
+    <!-- Section 1: Garden Shield Alerts -->
+   <!-- Replace your old garden-container section with this updated dashboard block -->
+<div id="garden-container" class="hidden">
+     
+    <div class="garden-dashboard">
+        <!-- 🛡️ LEFT COLUMN: GARDEN SHIELD ALERTS -->
+        <div id="garden-shield" class="garden-section">
+            <div class="section-header">
+                <h3>🛡️ Garden Shield</h3>
+                <p>Weather alerts for your plants</p>
+            </div>
+            <div id="alerts-list"></div>
+            
+            <p class="soil-disclaimer">
+                ⚠️ <strong>Gardener's Check:</strong> Regional weather APIs measure general air conditions, not your exact soil state. Always run a finger-test check inside your soil before adding water!
+            </p>
+        </div>
+
+        <!-- 🥬 RIGHT COLUMN: MY PATCH SUGGESTIONS & SEARCH -->
+        <div id="my-patch" class="garden-section">
+                <div class="class="section-header"">
+                    <h3> 🏡 My Patch</h3>
+                    <p>Beginner-friendly crops for your local climate</p>
+                </div>
+
+                <!-- NEW: Dynamic Search Input Bar Box -->
+            <div class="search-box-garden" style="margin-bottom: 1.5rem;">
+                <input type="text" id="garden-search-input" placeholder="🔍 Search vegetable (e.g. Tomato)..." 
+                       style="width: 100%; padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem;">
+            </div>
+                
+                <!-- This is where our javascript crop cards will dynamically mount! -->
+                <div id="crop-recommendations" class="crop-grid"></div>
+            </div>
+            
+            
+
+            <!-- Soil Moisture Honesty Disclaimer -->
+             <p class="garden-disclaimer">
+        ⚠️ <strong>Note:</strong> Weather metrics track regional conditions, not exact soil states. Always run a finger check inside your soil before adding water!
+    </p>
+</div>
+</div> 
+
+</body>
+</html>
