@@ -6,7 +6,7 @@ const cropsList = document.getElementById('crop-recommendation');
 // ==========================================
 
 // Global Configurations
-const API_KEY = 'X5NQVHQMD6JGYS37HFTL3RNMD'; 
+const API_KEY = 'YOUR_API_KEY_HERE'; 
 let currentWeatherData = null;
 let isCelsius = true;
 let activeRecommendedCrops = [];
