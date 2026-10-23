@@ -2,9 +2,9 @@
 
 A frontend web application that combines real-time weather tracking with regional vegetable-planting data to help beginner gardeners protect their crops.
 Instead of building a generic weather application, I built this dashboard to solve a real user problem: helping beginners decide what to plant, when to plant it, and how to react to changing weather conditions.
-🔗 Live Demo Link
+🔗 [Live Demo Link] (https://khahlisosekoto.github.io/weather-gardening-dashboard/)
 
-## key Features
+## Key Features
 
 • Dynamic Weather Tracking: Fetches real-time temperature, humidity, and wind speed data for any searched city.
 • Garden Shield Alerts: Displays an instant system status message notifying users of extreme weather conditions or stability.
